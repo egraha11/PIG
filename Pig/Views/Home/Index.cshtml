@@ -1,0 +1,56 @@
+﻿
+
+
+
+<div class="row">
+    <div class="col-7">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="row m-1">
+                            <div class="col-8"><div class="row p-1">Player 1: @ViewBag.Player1Score </div><div class="row p-1">Player 2: @ViewBag.Player2Score </div></div>
+                            <div class="col-4"><a asp-action="Delete" class="btn btn-light btn-outline-dark">New Game</a></div>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row m-1">
+                            <div class="col mb-2"><b>Player @ViewBag.Turn's turn</b></div>
+                        </div>
+                        <div class="row m-1">
+                            <a asp-action="Index" class="btn btn-dark btn-outline-dark text-white m-1">Roll</a>
+                            <a asp-action="Hold" class="btn btn-light btn-outline-dark m-1">Hold</a>
+                            <p class="m-1">Die: @ViewBag.Roll</p>
+                            <p class="m-1">Total: </p>
+                        </div>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-5">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td>First player to 20 wins</td>
+                </tr>
+                <tr>
+                    <td>Players take turns rolling the die</td>
+                </tr>
+                <tr>
+                    <td>Turn ends when player rolls a 1 or chooses to hold</td>
+                </tr>
+                <tr>
+                    <td>If a player rolls a 1, they lose all points rolled during that turn</td>
+                </tr>
+                <tr>
+                    <td>If a player holds, points earned during that turn are added to their total</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
